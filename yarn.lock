@@ -1325,6 +1325,20 @@
     "@babel/helper-string-parser" "^7.27.1"
     "@babel/helper-validator-identifier" "^7.27.1"
 
+"@base-org/account@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@base-org/account/-/account-1.0.2.tgz#e40cb41b366b9bc95a08078ae351db1c89386718"
+  integrity sha512-jVRmMgGWQSqL4EiKoj5koXPNnTbdf4a5h+ljRU0hL8wzbGJ0hM/ZyFm/j5VNrFAX5dLLmBoa9Tf+RRwyfTvdvQ==
+  dependencies:
+    "@noble/hashes" "1.4.0"
+    clsx "1.2.1"
+    eventemitter3 "5.0.1"
+    idb-keyval "6.2.1"
+    ox "0.6.9"
+    preact "10.24.2"
+    viem "^2.31.7"
+    zustand "5.0.3"
+
 "@bigmi/client@^0.4.1", "@bigmi/client@^0.4.2":
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/@bigmi/client/-/client-0.4.2.tgz#cd00c4a40033200a98e690e9b8476eb53eb80daa"
@@ -4745,11 +4759,12 @@
   resolved "https://registry.yarnpkg.com/@vanilla-extract/recipes/-/recipes-0.5.7.tgz#6677a267ca278e2277ac8ab41b64e57e84c1150c"
   integrity sha512-Fvr+htdyb6LVUu+PhH61UFPhwkjgDEk8L4Zq9oIdte42sntpKrgFy90MyTRtGwjVALmrJ0pwRUVr8UoByYeW8A==
 
-"@wagmi/connectors@5.8.6":
-  version "5.8.6"
-  resolved "https://registry.yarnpkg.com/@wagmi/connectors/-/connectors-5.8.6.tgz#5c5b1c15fbf0b83ed2d1aae0426b4f6990e1b153"
-  integrity sha512-yasw1bR4LuLeqYPJLezZHTT1s/Xv3LBStO4gmbkRK/jvspaJxd4btzHlo+e1XgOvBo5vFHFeFgz9x8Vl2i74IA==
+"@wagmi/connectors@5.9.0":
+  version "5.9.0"
+  resolved "https://registry.yarnpkg.com/@wagmi/connectors/-/connectors-5.9.0.tgz#b5c1ad97d3e12760b64011afb84add5aaaec5767"
+  integrity sha512-ZJDPGi74zMTOeF4CjUxDcS6IKKWumu7+XMMaIsEHL3kILTCGji4w6KKA5OHDsM2021hffeGMjBnlJ6myroUUXw==
   dependencies:
+    "@base-org/account" "1.0.2"
     "@coinbase/wallet-sdk" "4.3.6"
     "@metamask/sdk" "0.32.0"
     "@safe-global/safe-apps-provider" "0.18.6"
@@ -4757,10 +4772,10 @@
     "@walletconnect/ethereum-provider" "2.21.1"
     cbw-sdk "npm:@coinbase/wallet-sdk@3.9.3"
 
-"@wagmi/core@2.17.3":
-  version "2.17.3"
-  resolved "https://registry.yarnpkg.com/@wagmi/core/-/core-2.17.3.tgz#57da549a064a2e7682e9725f140efddf4adaf564"
-  integrity sha512-fgZR9fAiCFtGaosTspkTx5lidccq9Z5xRWOk1HG0VfB6euQGw2//Db7upiP4uQ7DPst2YS9yQN2A1m9+iJLYCw==
+"@wagmi/core@2.18.0":
+  version "2.18.0"
+  resolved "https://registry.yarnpkg.com/@wagmi/core/-/core-2.18.0.tgz#8869275bf872b519ae24eb38175a7faf0cd8feaf"
+  integrity sha512-33Wc/nnc/Q4qrqSL0F8BIDsG0iFTPrB4avjL/9vIE2DrA3GS3scVnrn6OtxpyF2TrwDZVfA+XUmfvoKuqtWPgw==
   dependencies:
     eventemitter3 "5.0.1"
     mipd "0.0.7"
@@ -10030,21 +10045,7 @@ viem@2.23.2:
     ox "0.6.7"
     ws "8.18.0"
 
-viem@>=2.29.0, viem@^2.1.1, viem@^2.27.2, viem@^2.31.6, viem@^2.31.7, viem@^2.32.0:
-  version "2.32.0"
-  resolved "https://registry.yarnpkg.com/viem/-/viem-2.32.0.tgz#6994fce43c5feed21367c80dd488a755838101da"
-  integrity sha512-pHwKXQSyEWX+8ttOQJdU5dSBfYd6L9JxARY/Sx0MBj3uF/Zaiqt6o1SbzjFjQXkNzWSgtxK7H89ZI1SMIA2iLQ==
-  dependencies:
-    "@noble/curves" "1.9.2"
-    "@noble/hashes" "1.8.0"
-    "@scure/bip32" "1.7.0"
-    "@scure/bip39" "1.6.0"
-    abitype "1.0.8"
-    isows "1.0.7"
-    ox "0.8.1"
-    ws "8.18.2"
-
-viem@^2.32.1:
+viem@>=2.29.0, viem@^2.1.1, viem@^2.27.2, viem@^2.31.6, viem@^2.31.7, viem@^2.32.0, viem@^2.32.1:
   version "2.32.1"
   resolved "https://registry.yarnpkg.com/viem/-/viem-2.32.1.tgz#ef2eed98e57142e6fb07c7f92c15e66d1080a5d2"
   integrity sha512-OWjT/o5RlZAINU5hUlIypppXUg5WKHtifZTuM9qE23kmMf8N8xkUp8GBa6pP+14nHGQBl8HWNZZLGmOO9TFYaQ==
@@ -10064,12 +10065,12 @@ void-elements@3.1.0:
   integrity sha512-Dhxzh5HZuiHQhbvTW9AMetFfBHDMYpo23Uo9btPXgdYP+3T5S+p+jgNy7spra+veYhBP2dCSgxR/i2Y02h5/6w==
 
 wagmi@^2.15.7:
-  version "2.15.7"
-  resolved "https://registry.yarnpkg.com/wagmi/-/wagmi-2.15.7.tgz#b156ca2f69fc4e6fcf5facb94195331e7898748c"
-  integrity sha512-nm7i6i5ct+9A4MMADf/XX9kLrc9s8aap/ZpSXYpwh1Tc/348RZ+kI9dn7+MDQE+ez8zkn75vMAfWg9UUpO4K1g==
+  version "2.16.0"
+  resolved "https://registry.yarnpkg.com/wagmi/-/wagmi-2.16.0.tgz#461e74a7c60cf2cdfccfdd247d29ec6c197f3d2f"
+  integrity sha512-zXbYp9bt79A+XkStOiGaf2aDy+3B/vH0aHWP8Fc9dyzElOCXqeAzKTwvyrTGsSOHehHmGzo/KPkfc+e/HerJ5A==
   dependencies:
-    "@wagmi/connectors" "5.8.6"
-    "@wagmi/core" "2.17.3"
+    "@wagmi/connectors" "5.9.0"
+    "@wagmi/core" "2.18.0"
     use-sync-external-store "1.4.0"
 
 web-streams-polyfill@4.0.0-beta.3:
