@@ -2,6 +2,9 @@
   "name": "dolla-bridge-interface",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "yarn": "^1.22.22"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
