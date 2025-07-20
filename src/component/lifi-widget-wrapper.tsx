@@ -5,7 +5,8 @@ import { useEffect, useState } from 'react';
 
 const SOLANA_CHAIN_ID = 1151111081099710;
 
-const widgetConfig: WidgetConfig = {
+const originalConfig: WidgetConfig = {
+  integrator: "dolla",
   variant: "wide",
   theme: {
     container: {
@@ -49,7 +50,7 @@ export default function LiFiWidgetWrapper() {
   const toAddress = params.get('toAddress')
   const fromAmount = params.get('fromAmount')
 
-  const [config, setConfig] = useState(widgetConfig)
+  const [config, setConfig] = useState(originalConfig)
 
   useEffect(() => {
     if (!toAddress) return;
